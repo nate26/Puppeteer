@@ -1,0 +1,18 @@
+.bag-viewport {
+    aspect-ratio: 5 / 8;
+    width: calc(30vw - 60px);
+    display: grid;
+    grid-template-columns: [first] 40% [line1] 40% [end];
+    grid-template-rows: [first] 25% [line1] 25% [line2] 25% [end];
+    justify-content: center;
+    align-content: center;
+    gap: 4% 6.4%;
+}
+
+.bag-item {
+    background-color: rgb(59, 59, 59);
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}

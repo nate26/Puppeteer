@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background-color: rgb(30, 30, 30);
+}
+
+.viewport {
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px black;
+    background-color: black;
+}
