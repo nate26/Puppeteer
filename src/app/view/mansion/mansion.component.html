@@ -1,6 +1,6 @@
-<div>
+<div class="map-layout">
     @for (tile of currentTiles(); track $index) {
-    <div class='map-tile'>
+    <div class="map-tile">
         @if (tile && tile.imageUrl) {
         <img [src]='tile.imageUrl'>
         }
