@@ -18,7 +18,7 @@ export const mansionRooms: IMansionRoom[] = [
             {
                 imageUrl: '../../assets/img/door_right.png',
                 xPos: 18,
-                yPos: 1,
+                yPos: 9,
                 interactKey: Key.RIGHT,
                 action: () => inject(MansionDataService).currentRoomId.set(1)
             }
@@ -38,14 +38,14 @@ export const mansionRooms: IMansionRoom[] = [
             {
                 imageUrl: '../../assets/img/door_left.png',
                 xPos: 1,
-                yPos: 1,
+                yPos: 9,
                 interactKey: Key.LEFT,
                 action: () => inject(MansionDataService).currentRoomId.set(0)
             },
             {
                 imageUrl: '../../assets/img/door_right.png',
                 xPos: 38,
-                yPos: 1,
+                yPos: 9,
                 interactKey: Key.RIGHT,
                 action: () => inject(MansionDataService).currentRoomId.set(2)
             }
@@ -65,21 +65,21 @@ export const mansionRooms: IMansionRoom[] = [
             {
                 imageUrl: '../../assets/img/door_left.png',
                 xPos: 1,
-                yPos: 1,
+                yPos: 9,
                 interactKey: Key.LEFT,
                 action: () => inject(MansionDataService).currentRoomId.set(1)
             },
             {
                 imageUrl: '../../assets/img/door_up.png',
                 xPos: 8,
-                yPos: 1,
+                yPos: 9,
                 interactKey: Key.UP,
                 action: () => inject(MansionDataService).currentRoomId.set(3)
             },
             {
                 imageUrl: '../../assets/img/door_down.png',
                 xPos: 16,
-                yPos: 1,
+                yPos: 9,
                 interactKey: Key.DOWN,
                 action: () => inject(MansionDataService).currentRoomId.set(4)
             }
@@ -99,7 +99,7 @@ export const mansionRooms: IMansionRoom[] = [
             {
                 imageUrl: '../../assets/img/door_down.png',
                 xPos: 8,
-                yPos: 1,
+                yPos: 9,
                 interactKey: Key.DOWN,
                 action: () => inject(MansionDataService).currentRoomId.set(2)
             }
@@ -119,7 +119,7 @@ export const mansionRooms: IMansionRoom[] = [
             {
                 imageUrl: '../../assets/img/door_up.png',
                 xPos: 4,
-                yPos: 1,
+                yPos: 9,
                 interactKey: Key.UP,
                 action: () => inject(MansionDataService).currentRoomId.set(2)
             }

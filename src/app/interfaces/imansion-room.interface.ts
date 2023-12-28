@@ -1,4 +1,4 @@
-import { IInteraction } from './iinteraction.interface';
+import { IInteraction } from './iinteractions.interface';
 
 export interface IMansionRoom {
     id: number;

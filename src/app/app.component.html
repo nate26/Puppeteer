@@ -1,3 +1,8 @@
+<div style="position: absolute">
+    <button (click)="current.set(current()-1)">-</button>
+    <button>{{current()}}</button>
+    <button (click)="current.set(current()+1)">+</button>
+</div>
 <div class="game-viewport">
     <app-bag />
     <app-view />

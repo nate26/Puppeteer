@@ -1,4 +1,4 @@
-import { IAbstractInteraction } from '../../../interfaces/iinteraction.interface';
+import { IAbstractInteraction } from '../../../interfaces/iinteractions.interface';
 
 export class WallInteraction implements IAbstractInteraction {
     obstruction = true;

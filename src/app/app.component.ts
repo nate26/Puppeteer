@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ViewComponent } from './view/view.component';
 import { BagComponent } from './bag/bag.component';
+import { MansionDataService } from './view/mansion/mansion-data.service';
+import { PlayerDataService } from './player/player-data.service';
 
 @Component({
     selector: 'app-root',
@@ -13,4 +15,5 @@ import { BagComponent } from './bag/bag.component';
 })
 export class AppComponent {
     title = 'PuppetMaster';
+    current = inject(MansionDataService).currentRoomId;
 }

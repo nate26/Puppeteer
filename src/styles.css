@@ -9,3 +9,8 @@ body {
     box-shadow: 1px 1px 3px 1px black;
     background-color: black;
 }
+
+.remove-dimensions {
+    width: 0px;
+    height: 0px;
+}

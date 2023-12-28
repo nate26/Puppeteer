@@ -1,9 +1,16 @@
-<div class="map-layout">
-    @for (tile of currentTiles(); track $index) {
-    <div class="map-tile">
-        @if (tile && tile.imageUrl) {
-        <img [src]='tile.imageUrl'>
+<div class="map-area">
+
+    <app-player />
+
+    <div class="map-layout"
+        [ngStyle]="{ height: currentRoom().width / currentRoom().height * 3 > 5 ? '100%' : 'fit-content'}">
+        @for (tile of currentTiles(); track $index) {
+        <div class="map-tile" [ngStyle]="{ width: tileDimensions(), height: tileDimensions() }">
+            @if (tile && tile.imageUrl) {
+            <img class="map-image" [src]='tile.imageUrl'>
+            }
+        </div>
         }
     </div>
-    }
+
 </div>
