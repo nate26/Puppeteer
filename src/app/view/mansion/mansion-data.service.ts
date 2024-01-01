@@ -1,7 +1,7 @@
 import { Injectable, Signal, computed, signal } from '@angular/core';
 import { mansionRooms } from '../../gameData/mansionRooms';
 import { WallInteraction } from './models/interaction.model';
-import { IAbstractInteraction, IInteraction } from '../../interfaces/iinteractions.interface';
+import { IAbstractInteraction } from '../../interfaces/iinteractions.interface';
 
 @Injectable({
     providedIn: 'root'

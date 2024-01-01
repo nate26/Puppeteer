@@ -1,4 +1,4 @@
-import { Component, HostListener, Signal, computed, signal } from '@angular/core';
+import { Component, HostListener, computed, signal } from '@angular/core';
 import { Key } from '../enum/key.enum';
 import { PlayerDataService } from './player-data.service';
 import { CommonModule } from '@angular/common';

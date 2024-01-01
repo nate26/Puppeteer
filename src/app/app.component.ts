@@ -16,4 +16,9 @@ import { PlayerDataService } from './player/player-data.service';
 export class AppComponent {
     title = 'PuppetMaster';
     current = inject(MansionDataService).currentRoomId;
+
+    constructor(public playerData: PlayerDataService, public mansionData: MansionDataService) {
+        console.log(mansionData.roomTiles())
+        console.log(mansionData.currentRoom().width)
+    }
 }

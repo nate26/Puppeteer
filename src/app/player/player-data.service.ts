@@ -2,15 +2,12 @@ import { Injectable, WritableSignal, computed, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { IItem } from '../interfaces/iitem.interface';
 import { MansionDataService } from '../view/mansion/mansion-data.service';
-import { debounce, debounceTime, filter, interval, map, tap } from 'rxjs';
+import { filter, interval, map, tap } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class PlayerDataService {
-
-    // min = 0
-    // max = 69vw
 
     private readonly PLAYER_HEIGHT_PADDING = '29.49px';
 
@@ -22,11 +19,21 @@ export class PlayerDataService {
 
     // -1 left, 0 still, 1 right
     readonly move = signal(0);
-    readonly movingX = toSignal(interval(30).pipe(
-        map(() => this.move()),
-        filter(move => move !== 0),
-        tap(move => this.xPos.set(this.xPos() + move))
+    readonly movingTicker = toSignal(interval(30).pipe(
+        map(() => ({
+            step: this.move(),
+            final: this.move() < 0 ? -1 : this.move() > 0 ? 1 : 0
+        })),
+        filter(move => move.step !== 0),
+        // collision check
+        filter(move => !this.mansionDataService.roomTiles()[this.location() + move.final]?.obstruction),
+        // trigger x change
+        tap(move => {
+            this.xPos.set(this.xPos() + move.step);
+        })
     ));
+
+    readonly location = computed(() => this.xPos() + this.yPos() * this.mansionDataService.currentRoom().width);
 
     readonly items: WritableSignal<IItem[]> = signal([
         { name: 'Hammer', imageUrl: '' },
